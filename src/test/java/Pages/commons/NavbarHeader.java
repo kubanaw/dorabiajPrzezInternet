@@ -64,30 +64,6 @@ public class NavbarHeader extends BasePage {
         hotels.click();
     }
 
-    public void pickFlightsElement() {
-        flights.click();
-    }
-
-    public void pickToursElement() {
-        tours.click();
-    }
-
-    public void pickCarsElement() {
-        cars.click();
-    }
-
-    public void pickVisaElement() {
-        visa.click();
-    }
-
-    public void pickHOffersElement() {
-        offers.click();
-    }
-
-    public void pickBlogElement() {
-        blog.click();
-    }
-
 
     public void setCurrency(String currency) {
         currencyList.click();

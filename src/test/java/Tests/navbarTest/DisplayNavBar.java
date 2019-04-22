@@ -17,7 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.concurrent.TimeUnit;
 
-public class DisplayLanguagesTest {
+public class DisplayNavBar {
 
 
     private WebDriver driver;
@@ -66,5 +66,11 @@ public class DisplayLanguagesTest {
         actions.moveToElement(submenu);
         actions.click().build().perform();
     }
+
+//    @Test
+//    public void givenThatHotelsLinkExist() {
+//        navbarHeader.pickHotelsElement();
+//        assertThat(hotelspage.getCurrentUrl()).isEqualTo(hotelspage.getUrl());
+//    }
 
 }

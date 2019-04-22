@@ -26,10 +26,10 @@ public abstract class BasePage {
                 PageFactory.initElements(driver, this);
         }
 
-//        protected String getRandomNumber (int numberOfDigits) {
-//                String randomNumber = RandomStringUtils.randomNumeric(numberOfDigits);
-//                return randomNumber;
-//        }
+        protected String getRandomNumber (int numberOfDigits) {
+                String randomNumber = RandomStringUtils.randomNumeric(numberOfDigits);
+                return randomNumber;
+        }
 
         public String getCurrentUrl() {
                 String currentURL = driver.getCurrentUrl();

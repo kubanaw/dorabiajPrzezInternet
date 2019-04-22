@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-public class DisplayFooterElementTest {
+public class DisplayMainPageElements{
 
     private WebDriverWait wait;
     private WebDriver driver;
