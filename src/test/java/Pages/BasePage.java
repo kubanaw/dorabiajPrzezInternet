@@ -16,19 +16,13 @@ public abstract class BasePage {
         protected WebDriverWait wait;
 
         //create random Strings, e-mails and numbers
-        protected  String randomString = RandomStringUtils.randomAlphabetic(7, 10);
+        private String randomString = RandomStringUtils.randomAlphabetic(7, 10);
         protected  String randomEmail = randomString + "@nwytg.pl";
-        private int numberOfDigits;
 
         public BasePage(WebDriver driver) {
                 this.driver = driver;
                 this.wait = new WebDriverWait(driver, 10);
                 PageFactory.initElements(driver, this);
-        }
-
-        protected String getRandomNumber (int numberOfDigits) {
-                String randomNumber = RandomStringUtils.randomNumeric(numberOfDigits);
-                return randomNumber;
         }
 
         public String getCurrentUrl() {

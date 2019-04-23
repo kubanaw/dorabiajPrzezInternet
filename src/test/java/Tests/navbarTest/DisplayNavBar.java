@@ -67,10 +67,24 @@ public class DisplayNavBar {
         actions.click().build().perform();
     }
 
-//    @Test
-//    public void givenThatHotelsLinkExist() {
-//        navbarHeader.pickHotelsElement();
-//        assertThat(hotelspage.getCurrentUrl()).isEqualTo(hotelspage.getUrl());
-//    }
+    @Test
+    public void changeToOpinie() {
+
+        this.navbarHeader.getOpinieElement();
+        assertThat(navbarHeader.getCurrentUrl())
+                .isEqualTo("http://www.dorabiajprzezinternet.pl/p/opinie.html");
+        assertThat(navbarHeader.getTitle())
+                .isEqualTo("Dorabiaj przez Internet: Opinie | Referencje");
+    }
+
+    @Test
+    public void changeToKontakt() {
+
+        this.navbarHeader.getKontaktElement();
+        assertThat(navbarHeader.getCurrentUrl())
+                .isEqualTo("http://www.dorabiajprzezinternet.pl/p/kontakt-zarabianie-w-domu-przez-internet.html");
+        assertThat(navbarHeader.getTitle())
+                .isEqualTo("Dorabiaj przez Internet: Kontakt");
+    }
 
 }
