@@ -20,6 +20,14 @@ public class NavbarHeader extends BasePage {
     private WebElement opinie;
     @FindBy(xpath = "//*[@id=\"menu\"]/div[1]/ul/li[3]/a")
     private WebElement kontakt;
+    @FindBy (css = "#menu > div.menu_left > a:nth-child(1) > i")
+    private WebElement instagram;
+    @FindBy (css = "#menu > div.menu_left > a:nth-child(2) > i")
+    private WebElement facebook;
+    @FindBy (css = "#menu > div.menu_left > a:nth-child(3) > i")
+    private WebElement printerest;
+    @FindBy (css = "#menu > div.menu_left > a:nth-child(4) > i")
+    private WebElement youtube;
 
     public NavbarHeader(WebDriver driver) {
         super(driver);
@@ -36,6 +44,22 @@ public class NavbarHeader extends BasePage {
 
     public void getKontaktElement() {
         kontakt.click();
+    }
+
+    public void getInstagramIcon() {
+        instagram.click();
+    }
+
+    public void getFacebookIcon() {
+        facebook.click();
+    }
+
+    public void getPrinterestIcon() {
+        printerest.click();
+    }
+
+    public void getYoutubeIcon() {
+        youtube.click();
     }
 
     public String getTitle() {

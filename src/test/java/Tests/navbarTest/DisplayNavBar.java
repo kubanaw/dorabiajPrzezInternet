@@ -53,7 +53,6 @@ public class DisplayNavBar {
         WebElement submenu = driver.findElement(By.xpath("//*[@id=\"menu\"]/div[1]/ul/li[1]/ul/li[1]/a"));
         actions.moveToElement(submenu);
         actions.click().build().perform();
-
     }
 
     @Test
@@ -86,5 +85,50 @@ public class DisplayNavBar {
         assertThat(navbarHeader.getTitle())
                 .isEqualTo("Dorabiaj przez Internet: Kontakt");
     }
+
+    @Test
+    public void changeToInstagram() {
+
+        this.navbarHeader.getInstagramIcon();
+        for (String handle : driver.getWindowHandles()) {
+            driver.switchTo().window(handle);
+        }
+        assertThat(driver.getCurrentUrl())
+                .isEqualTo("https://www.instagram.com/dorabiajteraz/");
+    }
+
+    @Test
+    public void changeToFacebook() {
+
+        this.navbarHeader.getFacebookIcon();
+        for (String handle : driver.getWindowHandles()) {
+            driver.switchTo().window(handle);
+        }
+        assertThat(driver.getCurrentUrl())
+                .isEqualTo("https://www.facebook.com/dorabiajprzezinternet/?_rdc=1&_rdr");
+    }
+
+    @Test
+    public void changeToPrinterest() {
+
+        this.navbarHeader.getPrinterestIcon();
+        for (String handle : driver.getWindowHandles()) {
+            driver.switchTo().window(handle);
+        }
+        assertThat(driver.getCurrentUrl())
+                .isEqualTo("https://pl.pinterest.com/dorabiajteraz/");
+    }
+
+    @Test
+    public void changeToYoutube() {
+
+        this.navbarHeader.getYoutubeIcon();
+        for (String handle : driver.getWindowHandles()) {
+            driver.switchTo().window(handle);
+        }
+        assertThat(driver.getCurrentUrl())
+                .isEqualTo("https://www.youtube.com/channel/UCktweLRLeTT4P93zlx_zJaw");
+    }
+
 
 }
