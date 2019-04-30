@@ -1,10 +1,8 @@
-package Tests.mainPageTest;
+package Tests.footerTest;
 
 
 import Pages.commons.Footer;
-import Pages.commons.MainPage;
 import Pages.commons.NavbarHeader;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
@@ -14,10 +12,11 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-public class DisplayMainPageElements{
+public class DisplayFooterElements {
 
     private WebDriverWait wait;
     private WebDriver driver;
@@ -40,6 +39,10 @@ public class DisplayMainPageElements{
         driver.manage().window().maximize();
         navbarHeader.openMainPage();
 
+        //scrollowanie na dół strony za pomocą skryptu js, żeby uwidocznić element footera:
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("window.scrollTo(0,Math.max(document.documentElement.scrollHeight,document.body.scrollHeight,document.documentElement.clientHeight));");
+
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -52,4 +55,15 @@ public class DisplayMainPageElements{
         if (driver != null)
         driver.quit();
     }
+
+
+    @Test
+    public void addEmailToNewsletterList() {
+
+        this.footer.typeEmailToNewsletter();
+        assertThat(footer.alreadySubscribedMessage())
+                .isEqualToIgnoringCase("Subscribed Successfully");
+    }
+
+
 }

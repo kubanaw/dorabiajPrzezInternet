@@ -32,8 +32,7 @@ public class NavbarHeader extends BasePage {
     public NavbarHeader(WebDriver driver) {
         super(driver);
     }
-
-    //METHODS for elements:
+  //  METHODS for elements:
     public void openMainPage() {
         driver.get(BASE_URL);
     }
