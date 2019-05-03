@@ -25,6 +25,9 @@ public class MainPage extends BasePage {
     public MainPage(WebDriver driver) {
         super(driver);
     }
+    public void openMainPage() {
+        driver.get(BASE_URL);
+    }
     //METHODS for elements:
     public void getHeaderElement() {
         header.click();
@@ -46,5 +49,10 @@ public class MainPage extends BasePage {
     }
     public void getPodatkuDarowizna(){
         podatkuDarowizna.click();
+    }
+    public String getTitle() {
+        String currentTitle = driver.getTitle();
+        LOGGER.info("current title: " + currentTitle);
+        return currentTitle;
     }
 }

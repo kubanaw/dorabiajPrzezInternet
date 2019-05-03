@@ -19,7 +19,6 @@ import java.util.concurrent.TimeUnit;
 
 public class DisplayNavBar {
 
-
     private WebDriver driver;
     private WebDriverWait wait;
     private NavbarHeader navbarHeader;
