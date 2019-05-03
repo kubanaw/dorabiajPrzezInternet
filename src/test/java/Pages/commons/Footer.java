@@ -124,9 +124,4 @@ public class Footer extends BasePage {
         return twitterIcon;
     }
 
-    public String getTitle() {
-        String currentTitle = driver.getTitle();
-        LOGGER.info("current title: " + currentTitle);
-        return currentTitle;
-    }
 }

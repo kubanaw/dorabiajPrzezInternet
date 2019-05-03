@@ -50,9 +50,5 @@ public class MainPage extends BasePage {
     public void getPodatkuDarowizna(){
         podatkuDarowizna.click();
     }
-    public String getTitle() {
-        String currentTitle = driver.getTitle();
-        LOGGER.info("current title: " + currentTitle);
-        return currentTitle;
-    }
+
 }

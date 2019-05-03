@@ -30,5 +30,9 @@ public abstract class BasePage {
                 LOGGER.debug("Current URL: " + currentURL);
                 return currentURL;
         }
-
+        public String getTitle() {
+                String currentTitle = driver.getTitle();
+                LOGGER.info("current title: " + currentTitle);
+                return currentTitle;
+        }
 }

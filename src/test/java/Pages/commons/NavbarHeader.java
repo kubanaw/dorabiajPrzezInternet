@@ -61,11 +61,6 @@ public class NavbarHeader extends BasePage {
         youtube.click();
     }
 
-    public String getTitle() {
-        String currentTitle = driver.getTitle();
-        LOGGER.info("current title: " + currentTitle);
-        return currentTitle;
-    }
 }
 
 
