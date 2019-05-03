@@ -10,9 +10,12 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -89,15 +92,16 @@ public class DisplayMainPageElements {
                 .isEqualTo("Dorabiaj przez Internet: FAQ");
     }
 
-//    @Test
-//    public void changeToKategorieBloga() {
-//
-//        this.mainPage.getKategorieBloga();
-//        assertThat(mainPage.getCurrentUrl())
-//                .isEqualTo("http://www.dorabiajprzezinternet.pl/p/faq.html");
-//        assertThat(mainPage.getTitle())
-//                .isEqualTo("Dorabiaj przez Internet: FAQ");
-//    }
+    @Test
+    public void changeToKategorieBloga() {
+        Actions actions = new Actions(driver);
+        WebElement menu = driver.findElement(By.cssSelector("#menu1 > ul > li:nth-child(5) > a"));
+        actions.moveToElement(menu);
+
+        WebElement submenu = driver.findElement(By.cssSelector("#menu1 > ul > li:nth-child(5) > ul > li:nth-child(1) > a"));
+        actions.moveToElement(submenu);
+        actions.click().build().perform();
+    }
 
     @Test
     public void changeToPodatkuDarowizna() {
