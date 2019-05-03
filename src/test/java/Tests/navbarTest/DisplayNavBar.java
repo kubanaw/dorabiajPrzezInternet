@@ -44,7 +44,7 @@ public class DisplayNavBar {
     }
 
     @Test
-    public void changeToAboutUs() {
+    public void changeToOBlogu() {
         Actions actions = new Actions(driver);
         WebElement menu = driver.findElement(By.cssSelector("#menu > div.menu_right > ul > li:nth-child(1) > a"));
         actions.moveToElement(menu);
