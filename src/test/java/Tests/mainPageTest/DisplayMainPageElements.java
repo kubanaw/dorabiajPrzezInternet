@@ -55,6 +55,15 @@ public class DisplayMainPageElements {
     }
 
     @Test
+    public void changeToHeader() {
+        this.mainPage.getHeaderElement();
+        assertThat(mainPage.getCurrentUrl())
+                .isEqualTo("http://www.dorabiajprzezinternet.pl/");
+        assertThat(mainPage.getTitle())
+                .isEqualTo("Dorabiaj przez Internet");
+    }
+
+    @Test
     public void changeToZacznijTutaj() {
 
         this.mainPage.getZacznijTutaj();
