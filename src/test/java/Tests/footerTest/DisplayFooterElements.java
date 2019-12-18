@@ -24,8 +24,8 @@ public class DisplayFooterElements {
 
     @BeforeClass
     public static void setupClass() {
-        WebDriverManager.chromedriver().version("73");
-        //WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().version("73"); <--- to na starego kompa
+        WebDriverManager.chromedriver().setup();
     }
 
     @Before
