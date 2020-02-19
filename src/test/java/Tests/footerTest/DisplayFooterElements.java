@@ -24,7 +24,7 @@ public class DisplayFooterElements {
 
     @BeforeClass
     public static void setupClass() {
-        //WebDriverManager.chromedriver().version("73"); <--- to na starego kompa
+        //WebDriverManager.chromedriver().version("79"); // <--- to na starego kompa
         WebDriverManager.chromedriver().setup();
     }
 
@@ -75,7 +75,7 @@ public class DisplayFooterElements {
         assertThat(driver.getCurrentUrl())
                 .isEqualTo("http://www.dorabiajprzezinternet.pl/");
     }
-
+//dupa
     @Test
     public void changeToZblogowani() {
 

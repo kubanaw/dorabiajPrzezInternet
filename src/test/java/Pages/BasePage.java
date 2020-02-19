@@ -15,6 +15,7 @@ public abstract class BasePage {
         protected WebDriver driver;
         protected WebDriverWait wait;
 
+
         //create random Strings, e-mails and numbers
         private String randomString = RandomStringUtils.randomAlphabetic(7, 10);
         protected  String randomEmail = randomString + "@nwytg.pl";
