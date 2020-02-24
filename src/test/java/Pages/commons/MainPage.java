@@ -44,9 +44,6 @@ public class MainPage extends BasePage {
     public void getFaq() {
         FAQ.click();
     }
-    public void getKategorieBloga() {
-        kategorieBloga.click();
-    }
     public void getPodatkuDarowizna(){
         podatkuDarowizna.click();
     }
