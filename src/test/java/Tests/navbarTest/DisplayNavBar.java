@@ -25,7 +25,7 @@ public class DisplayNavBar {
 
     @BeforeClass
     public static void setupClass() {
-         WebDriverManager.chromedriver().version("81"); //<--- to na starego kompa
+         WebDriverManager.chromedriver();//.version("81"); //<--- to na starego kompa
         //WebDriverManager.chromedriver().setup();
     }
 
@@ -96,7 +96,7 @@ public class DisplayNavBar {
         assertThat(driver.getCurrentUrl())
                 .isEqualTo("https://www.instagram.com/dorabiajteraz/");
     }
-//komentarz
+
     @Test
     public void changeToFacebook() {
 
