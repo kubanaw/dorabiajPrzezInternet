@@ -96,7 +96,7 @@ public class DisplayNavBar {
         assertThat(driver.getCurrentUrl())
                 .isEqualTo("https://www.instagram.com/dorabiajteraz/");
     }
-
+//komentarz
     @Test
     public void changeToFacebook() {
 
